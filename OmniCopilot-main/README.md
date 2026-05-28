@@ -1,74 +1,128 @@
-# 🤖 Omni Copilot: Premium AI Automation Workspace
+# OmniFlow — Workflow Analytics & Productivity Management Platform
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" />
-  <img src="https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css" />
-  <img src="https://img.shields.io/badge/Framer_Motion-Latest-ff69b4?style=for-the-badge&logo=framer" />
-</div>
+OmniFlow is a centralized workflow analytics and productivity management platform designed to streamline operational coordination across multiple workplace tools. The platform integrates Gmail, GitHub, Notion, Slack, and Google Calendar into a unified workspace to improve task visibility, reporting efficiency, and workflow management.
+
+Built with a strong focus on operational productivity and workflow automation, OmniFlow helps simplify information access, reduce manual coordination efforts, and support data-driven productivity management.
 
 ---
 
-**Omni Copilot** is a high-performance, AI-powered unified workspace assistant designed to bridge the gap between conversational AI and real-world productivity. It integrates your favorite tools—Google Workspace, Notion, Slack, and GitHub—into a single, sleek, and premium interface.
+# Key Features
 
-🚀 **Zero Placeholders. Real Actions. Premium Aesthetics.**
+## Centralized Workflow Management
+- Unified workspace for managing communication, scheduling, documentation, and task coordination across multiple platforms.
+- Reduced workflow fragmentation by integrating essential productivity tools into a single operational dashboard.
+
+## Productivity & Operational Visibility
+- Improved accessibility of workflow information and task tracking across integrated systems.
+- Simplified monitoring of activities, schedules, and communication workflows.
+
+## Workflow Automation
+- Automated scheduling and coordination workflows using integrated calendar and communication systems.
+- Reduced repetitive manual operations through automation-driven task handling.
+
+## Communication Integration
+- Read, search, and manage communication workflows through Gmail and Slack integrations.
+- Streamlined information exchange and improved coordination efficiency.
+
+## Document & Information Accessibility
+- Search and extract information from Google Drive documents and PDFs.
+- Improved accessibility and retrieval of operational information.
+
+## Reporting & Workflow Efficiency
+- Built workflow-focused monitoring and reporting capabilities to support operational productivity.
+- Enhanced visibility into workflow activities and coordination processes.
 
 ---
 
-## ✨ Key Features
+# Business Impact
 
-### 🎨 Premium UI Overhaul
-- **Animated Splash Screen**: A beautiful 5-second intro with smooth gradients and branding.
-- **Modern Auth Suite**: Fully functional Signup/Login flow with first/last name support and secure local database integration.
-- **Glassmorphic Design**: A state-of-the-art dark theme (#0F172A) with radiant violet-to-cyan glows and interactive elements.
-- **Fluid Animations**: Powered by Framer Motion for a "living" interface that responds to every interaction.
-
-### 🛠️ 13+ Integrated Power-Tools
-- **📅 Calendar & Meetings**: Schedule events with professional descriptions and native Google Meet links.
-- **💬 Multi-Channel Communication**: Read, search, and send messages across **Gmail**, **Slack**, and **Discord**.
-- **📂 AI File Extraction**: Search Google Drive and extract text from PDFs directly in the chat.
-- **💻 Developer Suite**: Fetch GitHub repos, list files, and track project changes.
-- **📝 Notion Workspace**: Create rich-text pages and log database entries with natural language.
+- Improved operational efficiency by centralizing fragmented productivity workflows into a single platform.
+- Enhanced workflow visibility and coordination across integrated tools and communication channels.
+- Simplified access to organizational information and reporting workflows.
+- Reduced manual effort in task coordination and operational management.
 
 ---
 
-## 🏗️ Technical Architecture
+# Tech Stack
 
-```mermaid
-graph TD
-    User([User]) <--> |Premium UI| Frontend[Next.js 15 + Framer Motion]
-    Frontend <--> |SSE Streaming| Backend[FastAPI Server]
-    Backend <--> |SQLite| DB[(Local User DB)]
-    Backend <--> |Agent Executor| Groq[Groq LPU Inference]
-    Groq <--> |qwen/qwen3-32b| ToolCalling[Agentic Logic]
-    ToolCalling --> Toolset[Omni Toolset]
-    Toolset --> Google[Google Workspace]
-    Toolset --> Notion[Notion API]
-    Toolset --> GitHub[GitHub API]
-    Toolset --> SlackDiscord[Slack & Discord Notifications]
+| Component | Technology |
+|---|---|
+| Frontend | React.js, Tailwind CSS |
+| Backend | FastAPI, Python |
+| Database | SQLite |
+| Integrations | Gmail API, Google Calendar API, GitHub API, Slack API, Notion API |
+| Authentication | JWT Authentication |
+| Automation | Workflow-based task automation |
+| UI/UX | Responsive dashboard interface |
+
+---
+
+# Core Integrations
+
+- Gmail
+- Google Calendar
+- GitHub
+- Slack
+- Notion
+- Google Drive
+
+---
+
+# Project Structure
+
+```bash
+backend/
+frontend/
+utils/
+database/
+integrations/
 ```
 
 ---
 
-## 🚀 Getting Started
+# Workflow Overview
 
-### 1. Prerequisites
-- **Python 3.9+** & **Node.js 18+**
-- **API Keys**: [Groq](https://console.groq.com/), [Google Cloud](https://console.cloud.google.com/), [Notion](https://www.notion.so/my-integrations), [Slack](https://api.slack.com/), [GitHub PAT](https://github.com/settings/tokens).
+```text
+User Workspace
+      │
+      ▼
+Integrated Communication & Productivity Tools
+(Gmail, Slack, GitHub, Calendar, Notion)
+      │
+      ▼
+Workflow Coordination & Automation
+      │
+      ▼
+Operational Visibility & Productivity Tracking
+      │
+      ▼
+Centralized Productivity Management
+```
 
-### 2. Quick Setup
+---
 
-**Backend:**
+# Getting Started
+
+## Prerequisites
+- Python 3.9+
+- Node.js 18+
+- API Keys for integrated services
+
+---
+
+## Backend Setup
+
 ```bash
 cd backend
 pip install -r requirements.txt
-# Generate token.json for Google
-python utils/generate_google_token.py 
-# Start Server
+
 uvicorn main:app --reload --port 8001
 ```
 
-**Frontend:**
+---
+
+## Frontend Setup
+
 ```bash
 cd frontend
 npm install
@@ -77,25 +131,18 @@ npm run dev
 
 ---
 
-## ⚙️ Configuration
+# Future Enhancements
 
-| Variable | Description |
-| :--- | :--- |
-| `GROQ_API_KEY` | Your Groq Cloud API Key |
-| `JWT_SECRET_KEY` | Secret for secure user authentication |
-| `SLACK_BOT_TOKEN` | Slack Bot OAuth Token (`xoxb-...`) |
-| `NOTION_API_KEY` | Notion Internal Integration Secret |
-| `GITHUB_ACCESS_TOKEN` | Personal Access Token (PAT) for GitHub |
+- Advanced productivity analytics dashboards
+- KPI-based workflow tracking
+- Team productivity reporting
+- Workflow trend analysis
+- Enhanced reporting automation
 
 ---
 
-## 🎨 Design Philosophy
-Omni Copilot is built on the **Soft Premium** aesthetic:
-- **Typography**: Inter / Outfit for high readability.
-- **Palette**: Deep Dark (#0F172A) / Radiant Violet (#7C3AED) / Cyber Cyan (#06B6D4).
-- **Interactions**: Subtle glows, scale transitions, and glassmorphic backdrops.
+# License
 
----
+MIT License
 
-## 🛡️ License
-MIT License. Created with ❤️ by [Gungun Chawla](https://github.com/gungun-001).
+Created by Anandita Baglwan
